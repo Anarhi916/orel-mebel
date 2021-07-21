@@ -1,0 +1,393 @@
+.about-main {
+  width: 100%;
+  margin-top: 84px;
+}
+
+.about-image {
+  height: 280px;
+  width: 100%;
+  background-image: url(../images/about-image.png);
+
+  background-size: cover;
+  background-position: center top;
+}
+
+.about-advirtizment {
+  width: 100%;
+  height: 50px;
+  background-color: #767e67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  img {
+    align-self: flex-end;
+  }
+}
+
+.about-advirtizment__text {
+  color: white;
+  font-family: 'Myriad Pro';
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.about-articles {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/background_1.png);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.about-articles__article {
+  flex: 0 1 40%;
+  height: 420px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-articles__image1 {
+  background-image: url(../images/about-article.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 55%;
+  width: 91%;
+  z-index: 2;
+  position: relative;
+}
+
+.about-articles__texture {
+  background-image: url(../images/about-texture.png);
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  width: 30%;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  left: 68%;
+}
+
+.about-articles__text-part {
+  background-color: #ccc;
+  height: 55%;
+  width: 82%;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px 10px 10px 10px;
+
+  h2 {
+    font-family: 'Myriad Pro';
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  p {
+    color: #625f5f;
+    font-family: 'Myriad Pro';
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 20px;
+  }
+  a {
+    display: block;
+    width: 50%;
+    height: 55px;
+    background-color: #ff671f;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    font-family: 'Myriad Pro';
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 19px;
+  }
+}
+
+.about-articles__article-2 {
+  padding: 20px 15px 20px 15px;
+  h2 {
+    font-family: 'Myriad Pro';
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    margin-top: 30px;
+    font-family: 'Myriad Pro';
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  a {
+    display: block;
+    margin-top: 30px;
+    font-family: 'Myriad Pro';
+    color: #ff671f;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+.about-articles__article-3 {
+  margin: 20px 15px 20px 15px;
+  width: 90%;
+  height: 90%;
+  background-image: url(../images/about-article2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about-sales {
+  height: 350px;
+  width: 100%;
+  background-image: url(../images/about-kitchen-footer.png);
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about-sales__box {
+  width: 600px;
+  height: 170px;
+
+  background-color: rgba(255, 255, 255, 0.54);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-sales__border {
+  width: 98%;
+  height: 95%;
+  border: 6px solid #5c585e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about-sales__text {
+  color: #5c585e;
+  font-family: 'Myriad Pro';
+  font-size: 80px;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.about-articles_background {
+  background-image: none;
+}
+
+.about-articles__image1_bottom {
+  background-image: url(../images/about-article3.png);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.about-articles__texture_bottom {
+  background-image: url(../images/about-article4.png);
+  top: 60px;
+  left: 0;
+}
+.about-articles__text-part_bottom {
+  left: 18%;
+  a {
+    background-color: #916901;
+    left: 45%;
+  }
+}
+
+.rewards__text-1_brown,
+.rewards__text-2_brown {
+  color: #916901 !important;
+}
+
+@media screen and (max-width: 1010px) {
+  .about-main {
+    margin-top: 110px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .about-articles__article {
+    flex: 0 1 80%;
+  }
+
+  .or1 {
+    order: 2;
+  }
+  .or2 {
+    order: 1;
+  }
+  .or3 {
+    order: 3;
+  }
+  .or4 {
+    order: 4;
+  }
+  .or5 {
+    order: 5;
+  }
+  .or6 {
+    order: 6;
+  }
+
+  .rewards_about {
+    margin-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .about-sales__box {
+    width: 500px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .about-main {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .about-articles__article {
+    flex: 0 1 95%;
+  }
+
+  .about-advirtizment {
+    height: 60px;
+  }
+
+  .about-articles__article-2 {
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .about-main {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 588px) {
+  .about-sales__box {
+    width: 400px;
+    height: 130px;
+  }
+
+  .about-sales__text {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .about-advirtizment__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .about-advirtizment__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .about-articles__article-text {
+    height: 470px;
+  }
+
+  .about-articles__text-part {
+    padding: 15px 10px 10px 10px;
+
+    h2 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+
+    a {
+      width: 82%;
+    }
+  }
+
+  .about-articles__text-part_bottom {
+    a {
+      width: 70%;
+      left: 25%;
+    }
+  }
+
+  .about-sales__box {
+    width: 300px;
+    height: 110px;
+  }
+
+  .about-sales__text {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .about-advirtizment__text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .about-articles__article-2 {
+    p {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .about-advirtizment__text {
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .about-articles__text-part {
+    padding: 10px 10px 10px 10px;
+
+    h2 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 13px;
+      padding-top: 15px;
+    }
+  }
+
+  .about-articles__article-2 {
+    p {
+      font-size: 14px;
+    }
+  }
+}

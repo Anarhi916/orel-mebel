@@ -1,0 +1,165 @@
+.kitchen-heading {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  h1 {
+    padding-top: 40px;
+    color: #161818;
+    font-family: 'Myriad Pro';
+    font-size: 26px;
+    font-weight: 400;
+  }
+  p:nth-child(2) {
+    color: #161818;
+    font-family: 'Myriad Pro';
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 10px;
+  }
+  p:nth-child(3) {
+    font-family: 'Myriad Pro';
+    color: #161818;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 40px;
+  }
+
+  p:nth-child(4) {
+    font-family: 'Myriad Pro';
+    color: #f05207;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 20px;
+  }
+}
+
+.layout {
+  width: 100%;
+  height: 350px;
+  background-color: #efefef;
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout__elem {
+  width: 190px;
+  height: 240px;
+  background-color: white;
+  position: relative;
+}
+
+.layout__elem_line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 60%;
+  height: 2px;
+  background-color: #ff6a23;
+}
+
+.layout__img1 {
+  width: 100%;
+  height: 120px;
+  background-image: url(../images/kitchen1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layout__img2 {
+  width: 100%;
+  height: 120px;
+  background-image: url(../images/kitchen2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layout__img3 {
+  width: 100%;
+  height: 120px;
+  background-image: url(../images/kitchen3.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layout__img4 {
+  width: 100%;
+  height: 120px;
+  background-image: url(../images/kitchen4.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.layout__text {
+  padding-left: 10px;
+  p {
+    display: block;
+  }
+  p:nth-child(1) {
+    color: #ff6a23;
+    font-family: 'Myriad Pro';
+    font-size: 18px;
+    font-weight: 700;
+  }
+  p:nth-child(2) {
+    margin-top: 10px;
+    color: #6f6f6f;
+    font-family: 'Myriad Pro';
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p:nth-child(3) {
+    margin-top: 10px;
+    color: #6f6f6f;
+    font-family: 'Myriad Pro';
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p:nth-child(4) {
+    margin-top: 10px;
+    color: black;
+    font-family: 'Myriad Pro';
+    font-size: 16px;
+    font-style: italic;
+  }
+}
+
+.kitchen-articles {
+  width: 100%;
+  height: auto;
+  padding: 20px 10% 20px 10%;
+}
+
+.kitchen-articles__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kitchen-articles__heading {
+  color: black;
+  font-family: 'Myriad Pro';
+  font-size: 20px;
+  font-weight: 700;
+}
+.kitchen-articles__line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-left: 20px;
+}
+
+.kitchen-articles__wrap-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.kitchen-articles__article {
+  flex: 0 1 48%;
+  height: 550px;
+  width: 100%;
+  background-color: red;
+  margin-top: 30px;
+}

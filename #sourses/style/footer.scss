@@ -1,0 +1,208 @@
+
+.footer{		
+	height: auto;
+	width: 100%;
+	background-color: #575843;	
+}
+
+.footer-column{
+	margin: 53px auto 20px auto;
+	width: 70%;
+}
+
+.footer__rows{
+	display: flex;	
+}
+
+.footer__item{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 20%;
+    
+
+
+	a{
+		text-decoration: none;
+		opacity: 0.72;
+		color: #a2a2a2;
+		font-family: "Myriad Pro";
+		font-size: 18px;
+		font-weight: 400;
+		text-align: end;
+		padding-top: 4px;
+
+		&:hover{
+			color: white;
+		}
+	}
+	
+}
+
+.item-double{
+	position: relative;
+}
+
+.item-double__section-1{
+	text-align: end;
+	p{
+		color: #1d1d1b;
+		font-family: "Myriad Pro";
+		font-size: 22px;
+		font-weight: 600;
+	}
+}
+
+.item-double__social{
+	margin-top: 24px;
+	display: inline-block;
+
+	a{
+		&:nth-child(2){
+			padding-right: 10px;
+			padding-left: 10px;
+	    }
+
+	    img{
+	    	transform: scale(0.8);
+	    }
+	}
+}
+
+.item-double__section-2 {
+	color: #2d2d29;
+	font-family: "Myriad Pro";
+	font-size: 16px;
+	font-weight: 600;	
+	text-align: end;
+	line-height: 24px;
+	position: absolute;
+	bottom: 0;
+	right: 0;	
+}
+
+
+
+@media screen and (max-width: 1226px) {
+
+	.footer-column{
+		width: 85%;
+	}
+
+}
+
+@media screen and (max-width: 1039px) {
+
+	.footer-column{
+		width: 97%;
+	}
+
+}
+
+@media screen and (max-width: 870px) {
+	
+	.footer-column{
+		width: 100%;
+		margin: 15px auto 20px auto;
+	}
+
+	.footer__rows{
+		flex-wrap: wrap;
+		// justify-content: flex-start;
+	}
+
+	.item-double__section-2{
+		display: none;
+	}
+
+	.footer__item{
+		flex: 0 1 45%;
+		 a{
+		 	font-size: 30px;
+		 }
+
+		&:nth-child(1){
+			order: 1;
+		}	
+
+		&:nth-child(2){
+			order: 3;			
+		}
+
+		&:nth-child(3){
+			order: 4;
+		}
+
+		&:nth-child(4){
+			order: 2;
+		}		
+	}
+
+	.item-double__section-1{
+		p{
+			font-size: 36px;			
+		}
+	}
+
+	.item-double__social{
+		margin-top: 5px;
+	}
+
+}
+
+@media screen and (max-width: 680px) {
+
+	.footer__item{
+		
+		 a{
+		 	font-size: 24px;
+		 	margin-bottom: 5px;
+		 }
+		}
+}
+
+@media screen and (max-width: 565px) {
+
+	.footer__item{
+
+		 a{
+		 	font-size: 21px;
+		 }
+		}
+}
+
+@media screen and (max-width: 465px) {
+
+	.footer__item{
+		flex: 0 1 49%;
+		 a{
+		 	font-size: 18px;
+		 }
+		}
+}
+
+
+@media screen and (max-width: 465px) {
+
+.footer__item{
+		flex: 0 1 95%;
+		 a{
+		 	font-size: 30px;
+		 }
+
+		&:nth-child(1){
+			order: 2;
+		}	
+
+		&:nth-child(2){
+			order: 3;			
+		}
+
+		&:nth-child(3){
+			order: 4;
+		}
+
+		&:nth-child(4){
+			order: 1;
+		}		
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Кухни</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/MyriadPro/fonts_myriad.css"
+    />
+    <link href="http://fonts.cdnfonts.com/css/niagara-solid" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      @@include('html/header.html')
+      <main class="kitchen-main about-main">
+        <div class="kitchen-heading">
+          <h1>ВАША ИНДИВИДУАЛЬНАЯ КУХНЯ</h1>
+          <p>КУХНЯ МЕЧТЫ ОТ 15 000 ГРН</p>
+          <p>
+            КОМПАНИЯ “СПЕЙС” ГОТОВА ПРЕДОСТАВИТЬ МНОГООБРАЗИЕ ВЫБОРА, ЦЕНЫ И
+            КАЧЕСТВА, ОБЕДИНЯЯ ЖЕЛАНИЯ И ВЗМОЖНОСТИ
+          </p>
+          <p>Какая планировка Вас интересует?</p>
+        </div>
+        <div class="layout">
+          <div class="layout__elem layout__elem_line">
+            <div class="layout__img1"></div>
+            <div class="layout__text">
+              <p>SMALL</p>
+              <p>10 м2</p>
+              <p>1 стена или текст текст</p>
+              <p>от 8 000,00 грн</p>
+            </div>
+          </div>
+          <div class="layout__elem">
+            <div class="layout__img2"></div>
+            <div class="layout__text">
+              <p>MEDIUM</p>
+              <p>15 м2</p>
+              <p>1 стена или текст текст</p>
+              <p>от 20 000,00 грн</p>
+            </div>
+          </div>
+          <div class="layout__elem">
+            <div class="layout__img3"></div>
+            <div class="layout__text">
+              <p>LARGE</p>
+              <p>20 м2</p>
+              <p>1 стена или текст текст</p>
+              <p>от 50 000,00 грн</p>
+            </div>
+          </div>
+          <div class="layout__elem">
+            <div class="layout__img4"></div>
+            <div class="layout__text">
+              <p>EXTRA LARGE</p>
+              <p></p>
+              <p>1 стена или текст текст</p>
+              <p>от 70 000,00 грн</p>
+            </div>
+          </div>
+        </div>
+        <div class="kitchen-articles">
+          <div class="kitchen-articles__wrap">
+            <div class="kitchen-articles__heading">ФАСАДЫ</div>
+            <div class="kitchen-articles__line"></div>
+          </div>
+          <div class="kitchen-articles__wrap-2">
+            <article class="kitchen-articles__article"></article>
+            <article class="kitchen-articles__article"></article>
+            <article class="kitchen-articles__article"></article>
+            <article class="kitchen-articles__article"></article>
+          </div>
+        </div>
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>

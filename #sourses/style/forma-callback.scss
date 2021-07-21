@@ -1,0 +1,483 @@
+.forma-callback{		
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);	
+	z-index: 999;		
+	width: 900px;
+	height: 450px;
+	background-color: white;
+	border: 3px solid black;
+	display: none;	
+}
+
+.forma-callback__close-icon{	
+	width: 40px;
+	height: 40px;
+	background-color: #ccc;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+
+	div{
+     	background-color: #fff;     	
+     	width: 100%;
+     	height: 3px;
+     	transform: rotate(45deg);
+     	position: relative;  
+     	top: 17px;   	     	
+    }
+
+    &:before{
+     	content: '';
+     	display: block;
+     	background-color: #fff;
+     	position: relative;
+     	width: 100%;
+     	height: 3px;
+     	transform: rotate(-45deg);
+     	top: 20px;     	
+	}
+
+	&:hover{
+		background-color: #ff671f;
+	}
+}
+
+.forma-callback__wrap{
+	width: 100%;
+	display: grid;	
+	grid-template: 1fr / 1fr 1fr;	
+}
+
+.forma-callback__wrap-1{
+	padding-left: 40px;
+}
+
+.forma-callback__wrap-2{
+	justify-self: end;
+	padding-right: 35px;
+}
+
+.forma-callback__zagolovok{
+	color: white;        
+    color: #787d67;
+	font-family: "Myriad Pro";
+	font-size: 24px;
+	font-weight: 400; 
+	margin-top: 24px;     
+}
+
+.forma-callback__text{    
+    color: #ff671f;
+	font-family: "Myriad Pro";
+	font-size: 14px;
+	font-weight: 400; 
+	margin-top: 23px;
+}
+
+.forma-callback__input-forms{
+	margin: 30px auto;
+	text-align: center;	
+}
+
+.forma-callback__submit{
+	margin-top: 25px;
+	text-align: end;
+}
+
+.forma-callback__input{
+	width: 377px;
+	height: 37px;
+	background-color: #ccc;
+	border: none;	
+	text-indent: 19px;
+	color: white;
+	font-family: "Myriad Pro";
+	font-size: 18px;
+	font-style: italic;	
+}
+
+
+.forma-callback__enter-text>textarea{
+    background-color: #ccc;		
+	resize: none;	
+	text-indent: 30px;
+	color: white;
+	font-family: "Myriad Pro";
+	font-size: 18px;
+	font-style: italic;
+	border: none;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-top: 110px;
+}
+
+.forma-callback__submit-button{	
+	color: white;
+	font-family: "Myriad Pro";
+	font-size: 18px;
+	font-weight: 400;
+	width: 200px;
+	height: 40px;
+	background-color: #ff671f;
+	border-radius: 4px; 
+	border: none;  
+}
+
+textarea::-webkit-input-placeholder {
+color: white !important;
+font-size: 18px !important;
+}
+ 
+textarea:-moz-placeholder { 
+color: white !important;
+font-size: 18px !important;  
+}
+ 
+textarea::-moz-placeholder { 
+color: white !important; 
+font-size: 18px !important; 
+}
+ 
+textarea:-ms-input-placeholder {  
+color: white !important; 
+font-size: 18px !important; 
+}
+
+.forma-callback__input-forms>input::-webkit-input-placeholder {
+color: white !important;
+font-size: 16px !important;
+font-family: "Myriad Pro" !important;
+font-style: italic !important;
+}
+ 
+.forma-callback__input-forms>input:-moz-placeholder { 
+color: white !important;
+font-size: 16px !important; 
+font-family: "Myriad Pro" !important;
+font-style: italic !important; 
+}
+ 
+.forma-callback__input-forms>input::-moz-placeholder {  
+color: white !important; 
+font-size: 16px !important; 
+font-family: "Myriad Pro" !important;
+font-style: italic !important;
+}
+ 
+.forma-callback__input-forms>input:-ms-input-placeholder {  
+color: white !important; 
+font-size: 16px !important; 
+font-family: "Myriad Pro" !important;
+font-style: italic !important;
+}
+
+.forma-congratuletion{
+	width: 450px;
+	height: 170px;
+	background-color: #ccc;	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);	
+	z-index: 5;	
+	border-radius: 18px;	
+	display: none;	
+}
+
+.forma-congratuletion__text{
+	color: #ff671f; 
+	font-family: "Myriad Pro";  
+    font-size: 34px;
+    font-weight: bold;    
+    text-align: center;
+    margin-top: 60px;    
+}
+
+
+@media screen and (max-width: 1010px) {
+
+	.forma-callback{
+		width: 70%;
+		height: 700px;					
+	}
+
+	.forma-callback__wrap{	
+
+		grid-template: 1fr 1fr/ 1fr;
+		width: 85%;	
+		height: 100%;		
+		justify-items: center;	
+		margin: 0 auto;
+				
+
+	}
+
+	.forma-callback__wrap-1{
+		grid-row: 1/2;
+		padding: 0;
+		width: 100%;		
+	}
+
+	.forma-callback__wrap-2{
+		grid-row: 2/3;
+		padding: 0;
+		width: 100%;
+		align-self: end;
+		padding-bottom: 22px;
+				
+	}
+
+	.forma-callback__zagolovok{
+		font-size: 33px;     
+	}
+
+	.forma-callback__text{    
+	    font-size: 20px;
+	    margin-top: 10px;
+	}
+
+	.forma-callback__input-forms{
+		margin: 25px 0;
+		width: 100%;
+		text-align: start;
+	}	
+
+	.forma-callback__input{
+		width: 100%;
+		height: 48px;		
+		font-size: 25px;		
+	}
+
+
+	.forma-callback__enter-text>textarea{	    
+		font-size: 25px;		
+		padding: 0;
+		margin-top: 0;
+		width: 100%;
+		height: 160px;
+		padding-top: 20px;
+	}
+
+	.forma-callback__submit-button{			
+		font-size: 24px;		
+		width: 220px;
+		height: 60px;		
+	}
+
+	textarea::-webkit-input-placeholder {	 
+		font-size: 22px !important;
+	}
+	 
+	textarea:-moz-placeholder { 	
+		font-size: 22px !important;  
+	}
+	 
+	textarea::-moz-placeholder { 
+		font-size: 22px !important; 
+	}
+	 
+	textarea:-ms-input-placeholder {  
+		font-size: 22px !important; 
+	}
+
+	.forma-callback__input-forms>input::-webkit-input-placeholder {
+		font-size: 22px !important;
+	}
+	 
+	.forma-callback__input-forms>input:-moz-placeholder { 
+		font-size: 22px !important; 
+	}
+	 
+	.forma-callback__input-forms>input::-moz-placeholder { 
+		font-size: 22px !important; 
+	}
+	 
+	.forma-callback__input-forms>input:-ms-input-placeholder {  
+		font-size: 22px !important; 
+	}
+
+	.forma-callback__submit{
+		margin-top: 30px;
+	}
+
+	.forma-callback__close-icon{	
+		width: 60px;
+		height: 60px;
+		
+		div{	     	
+	     	height: 4px;	     	  
+	     	top: 22px;   	     	
+	    }
+
+	    &:before{	     	
+	     	height: 4px;
+	     	top: 26px;     	
+		}
+
+		&:hover{
+			background-color: #ff671f;
+		}
+	}
+
+	// .forma-congratuletion{
+	// 	width: 450px;
+	// 	height: 170px;
+	// 	background-color: #ccc;	
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translateY(-50%) translateX(-50%);	
+	// 	z-index: 5;	
+	// 	border-radius: 18px;	
+	// 	display: none;	
+	// }
+
+	// .forma-congratuletion__text{
+	// 	color: #ff671f; 
+	// 	font-family: "Myriad Pro";  
+	//     font-size: 34px;
+	//     font-weight: bold;    
+	//     text-align: center;
+	//     margin-top: 60px;    
+	// }
+
+}
+
+@media screen and (max-width: 836px) {
+
+	.forma-callback{
+		width: 90%;
+		height: 650px;					
+	}	
+
+	.forma-callback__zagolovok{
+		margin-top: 10px;
+	}
+
+	.forma-callback__text{
+		font-size: 18px;
+	}
+
+	.forma-callback__enter-text>textarea{
+		padding-top: 10px;
+	}
+
+}
+
+@media screen and (max-width: 690px) {
+
+	.forma-callback__text{
+		font-size: 16px;
+	}
+
+	.forma-callback__input{
+		height: 42px;		
+	}
+
+}
+
+
+@media screen and (max-width: 565px) {
+
+	.forma-callback{
+		height: 600px;					
+	}	
+
+	.forma-callback__enter-text>textarea{	    
+		font-size: 18px;		
+		height: 140px;		
+	}
+
+	.forma-callback__submit-button{
+		height: 50px;
+	}
+	
+
+}
+
+@media screen and (max-width: 493px) {
+	.forma-callback__text{
+		font-size: 14px;		
+	}
+
+	.forma-callback__close-icon{	
+		width: 50px;
+		height: 50px;
+
+		div{	     	  
+	     	top: 20px;   	     	
+	    }
+
+	    &:before{
+	     	top: 24px;     	
+		}
+	}	
+
+}
+
+@media screen and (max-width: 400px) {
+	.forma-callback__text{
+		font-size: 13px;		
+	}
+
+	.forma-callback__wrap{	
+		width: 90%;	
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+	.forma-callback__text{
+		font-size: 12px;		
+	}
+
+	.forma-callback__zagolovok{
+		font-size: 28px;
+	}
+
+}
+
+@media screen and (max-width: 330px) {
+
+	.forma-callback{
+		height: 550px;					
+	}
+	
+	.forma-callback__zagolovok{
+		font-size: 24px;
+	}
+
+	.forma-callback__input-forms{
+		margin: 20px auto;
+	}
+
+	.forma-callback__close-icon{	
+		width: 45px;
+		height: 45px;
+
+		div{	     	  
+	     	top: 16px;   	     	
+	    }
+
+	    &:before{
+	     	top: 20px;     	
+		}
+
+		&:hover{
+			background-color: #ff671f;
+		}
+	}
+
+	.forma-callback__submit{
+		margin-top: 15px;
+	}
+
+	.forma-callback__wrap-2{
+		padding-bottom: 15px;
+				
+	}
+
+}

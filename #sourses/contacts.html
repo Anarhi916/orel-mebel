@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Контакты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/MyriadPro/fonts_myriad.css"
+    />
+    <link href="http://fonts.cdnfonts.com/css/niagara-solid" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      @@include('html/header.html')
+      <main class="central">
+        <section class="top-part">
+          <div class="top-part__text">
+            <h1 class="top-part__heading">
+              Нам любопытно узнать о <br />Вашем следующем проекте
+            </h1>
+            <p class="top-part__paragr">
+              Свяжитесь с нашей командой,<br />
+              чтобы назначить вводную встречу для обсуждения Ваших
+              потребностей,<br />
+              или просто отправьте нам запрос
+            </p>
+          </div>
+          <div class="top-part__img">
+            <div class="top-part__wrap"></div>
+          </div>
+        </section>
+        <section class="contact-form">
+          <div class="contact-form__wrap">
+            <div class="contact-form__fones fones">
+              <h2 class="fones__heading">Свяжитесь с нами</h2>
+              <p class="fones__contacts">
+                <span>По номеру телефона</span>
+                <span>+380974743472</span>
+                <span>По электронной почте</span>
+                <span>gipgetanarhi9@gmail.com</span>
+                <span>Города</span>
+                <span
+                  >Кременчуг,<br />
+                  Горишние Плавни(Комсомольск)</span
+                >
+              </p>
+            </div>
+            <div class="contact-form__callback">
+              <p class="contact-form__text-apper">
+                либо заполните форму обратной связи
+              </p>
+              <form method="POST" class="contact-form__form" id="forma_3">
+                <div class="contact-form__input-forms">
+                  <p>ФИО*</p>
+                  <input class="contact-form__input" type="text" name="name" />
+                </div>
+                <div class="contact-form__input-forms">
+                  <p>E-mail*</p>
+                  <input class="contact-form__input" type="text" name="email" />
+                </div>
+                <div class="contact-form__input-forms">
+                  <p>Телефон*</p>
+                  <input class="contact-form__input" type="text" name="fone" />
+                </div>
+                <div class="contact-form__enter-text">
+                  <p>Сообщение*</p>
+                  <textarea type="text" name="text_order"></textarea>
+                </div>
+                <div class="contact-form__submit">
+                  <button class="contact-form__submit-button" type="submit">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="script/main.js"></script>
+  </body>
+</html>
