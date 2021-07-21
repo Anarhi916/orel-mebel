@@ -259,6 +259,17 @@
   visibility: visible;
 }
 
+@media screen and (max-width: 1250px) {
+  .call-me {
+    position: absolute;
+    right: 10px;
+    top: 102px;
+    &:before {
+      left: 210px;
+    }
+  }
+}
+
 @media screen and (max-width: 1010px) {
   .header-logo {
     display: none;
