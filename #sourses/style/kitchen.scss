@@ -130,7 +130,7 @@
 .kitchen-articles {
   width: 100%;
   height: auto;
-  padding: 20px 10% 20px 10%;
+  padding: 20px 15% 20px 15%;
 }
 
 .kitchen-articles__wrap {
@@ -158,8 +158,65 @@
 }
 .kitchen-articles__article {
   flex: 0 1 48%;
-  height: 550px;
+  height: 500px;
   width: 100%;
-  background-color: red;
+  // background-color: red;
   margin-top: 30px;
+  position: relative;
+}
+
+.kitchen-articles__text-1 {
+  width: 200px;
+  height: 42px;
+  color: #010101;
+  font-family: 'Myriad Pro';
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #5c695b;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding-top: 15px;
+  padding-left: 7px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background-color: white;
+}
+
+.kitchen-articles__image {
+  width: 250px;
+  height: 440px;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  border: 1px solid #5c695b;
+  z-index: 1;
+}
+
+.kitchen-articles__image-1 {
+  height: 440px;
+  width: 240px;
+  background-image: url(../images/kitchen5.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kitchen-articles__text-2 {
+  width: 250px;
+  height: auto;
+  background-color: #515f50;
+  color: white;
+  font-family: 'Myriad Pro';
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: 68px;
+  left: 162px;
+  z-index: 3;
+  padding: 15px;
 }
