@@ -443,13 +443,128 @@
   font-family: 'Myriad Pro';
   font-size: 20px;
   font-weight: 700;
+  flex: 1 0 auto;
+  text-transform: uppercase;
 }
 .kitchen-facade__line {
   height: 2px;
   width: 100%;
   background-color: black;
   margin-left: 20px;
+  flex: 1 1 auto;
 }
+
+.kitchen-mounting {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  & > h2 {
+    color: #080808;
+    font-family: 'Myriad Pro';
+    font-size: 21px;
+    font-weight: 400;
+    padding-top: 40px;
+  }
+  & > p {
+    color: #ff6a23;
+    font-family: 'Myriad Pro';
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 10px;
+  }
+}
+
+.kitchen-mounting__row {
+  display: flex;
+  padding: 30px 55px 30px 55px;
+}
+.certificate {
+  flex: 1 1 auto;
+  height: 300px;
+  border: 4px solid #818169;
+  text-align: center;
+  position: relative;
+  h2 {
+    color: #080808;
+    font-family: 'Myriad Pro';
+    font-size: 21px;
+    font-weight: 400;
+    padding-top: 40px;
+  }
+}
+.kitchen-mounting__certificate:first-child {
+  margin-right: 50px;
+}
+
+.certificate__price {
+  color: #ff6a23;
+  font-family: 'Myriad Pro';
+  font-size: 31px;
+  font-weight: 700;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.certificate__text {
+  color: black;
+  font-family: 'Myriad Pro';
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  position: absolute;
+  bottom: 40px;
+  padding: 0 10px 0 10px;
+}
+
+.kitchen-galery {
+  background-color: #f0506a;
+  background-image: -webkit-linear-gradient(75deg, #e52d4b 50%, #f0506a 50%);
+}
+
+// слайдер кухни
+
+.kitchen-slider {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+  padding-left: 70px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.kitchen-slider .slick-arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  font-size: 0;
+}
+
+.kitchen-slider .slick-arrow.slick-prev {
+  left: 0;
+  border: 18px solid transparent;
+  border-right: 24px solid white;
+  background: none;
+  outline: none;
+}
+
+.kitchen-slider .slick-arrow.slick-next {
+  right: 0;
+  border: 18px solid transparent;
+  border-left: 24px solid white;
+  background: none;
+  outline: none;
+}
+
+.kitchen-slider__item {
+  width: 40%;
+  height: 350px;
+  margin-right: 20px;
+}
+
+// конец слайдер кухни
 
 @media screen and (max-width: 1185px) {
   .kitchen-head {
@@ -502,6 +617,15 @@
 
   .kitchen-head__right {
     flex: 0 1 45%;
+  }
+
+  .kitchen-mounting__row {
+    flex-direction: column;
+  }
+
+  .kitchen-mounting__certificate:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -584,6 +708,14 @@
 
   .layout {
     margin-top: 20px;
+  }
+
+  .kitchen-mounting__row {
+    padding: 30px 15px 30px 15px;
+  }
+
+  .certificate__text {
+    bottom: 20px;
   }
 }
 

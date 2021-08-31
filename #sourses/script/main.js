@@ -153,8 +153,6 @@ $(document).ready(function () {
   function onWindowReduce(e) {
     let windWidth = e.target.outerWidth
     if (windWidth < 1020 && sliderOn == 0) {
-      // window.removeEventListener('resize', onWindowReduce)
-      // window.addEventListener('resize', onWindowIncrease)
       $('.main-skills').slick({
         autoplay: true,
         autoplaySpeed: 2000,
@@ -173,8 +171,6 @@ $(document).ready(function () {
   function onWindowIncrease(e) {
     let windWidth1 = e.target.outerWidth
     if (windWidth1 >= 1020 && sliderOn == 1) {
-      // window.removeEventListener('resize', onWindowIncrease)
-      // window.addEventListener('resize', onWindowReduce)
       $('.main-skills').slick('unslick')
       sliderOn = 0
     }
@@ -208,6 +204,54 @@ function changeSrc() {
     })
     .then(() => {
       loadImage()
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
+        .then(() => loadImage())
         .then(() => loadImage())
         .then(() => loadImage())
         .then(() => loadImage())
@@ -391,3 +435,110 @@ function changeText() {
 changeText()
 
 // конец замена текста в меню в зависимости от страницы
+
+// кухни слайдер начало!
+
+let numberSlideKitchen = 1
+let kitchenSliderSrc
+
+function changeSrcKitchen() {
+  loadImageKitchen()
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .then(() => loadImageKitchen())
+    .catch((err) => false)
+    .finally(() => {
+      $('.kitchen-slider').slick({
+        slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 800,
+        pauseOnFocus: false,
+        waitForAnimate: false,
+      })
+      $('.kitchen-slider').slick('setPosition')
+    })
+}
+
+function loadImageKitchen() {
+  return new Promise(function (resolve, reject) {
+    let imageKitchen = document.createElement('img')
+    imageKitchen.className = 'kitchen-slider__item'
+    imageKitchen.src = `images/kitchen/${numberSlideKitchen}.png`
+    $('.kitchen-slider').append(imageKitchen)
+
+    imageKitchen.addEventListener('load', () => {
+      numberSlideKitchen++
+      resolve()
+    })
+
+    imageKitchen.addEventListener('error', () => {
+      $('.kitchen-slider>.kitchen-slider__item:last').remove()
+      console.clear()
+      reject()
+    })
+  })
+}
+
+changeSrcKitchen()
+
+// слайдер кухни конец
