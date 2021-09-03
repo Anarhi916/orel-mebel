@@ -535,7 +535,11 @@
 }
 
 // слайдер кухни
-
+.kitchen-galery {
+  .kitchen-slider {
+    display: none;
+  }
+}
 .kitchen-slider {
   width: 98%;
   margin: 0 auto;

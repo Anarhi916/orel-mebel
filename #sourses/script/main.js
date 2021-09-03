@@ -104,6 +104,9 @@ let sliderImages = $('.big-slider__wrap-item').children()
 sliderImages = Array.prototype.slice.call(sliderImages)
 
 $(document).ready(function () {
+  // запуск слайдера на в категориях(кухни, шкафы и т.д) после загрузки страницы
+  changeSrcKitchen()
+  // конец
   $('.little-slider').slick({
     slidesToShow: 3,
     autoplay: true,
@@ -524,6 +527,7 @@ function changeSrcKitchen() {
         ],
       })
       $('.kitchen-slider').slick('setPosition')
+      $('.kitchen-slider').show()
     })
 }
 
@@ -554,7 +558,7 @@ function loadImageKitchen() {
   })
 }
 
-changeSrcKitchen()
+// changeSrcKitchen()
 
 let numberBigKitchenSlider
 $(document).click(function (e) {
