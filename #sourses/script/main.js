@@ -436,7 +436,7 @@ changeText()
 
 // конец замена текста в меню в зависимости от страницы
 
-// кухни слайдер начало!
+// кухни слайдер малый начало!
 
 let numberSlideKitchen = 1
 let kitchenSliderSrc
@@ -510,10 +510,18 @@ function changeSrcKitchen() {
       $('.kitchen-slider').slick({
         slidesToShow: 2,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 2000,
         speed: 800,
         pauseOnFocus: false,
         waitForAnimate: false,
+        responsive: [
+          {
+            breakpoint: 760,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       })
       $('.kitchen-slider').slick('setPosition')
     })
@@ -521,12 +529,19 @@ function changeSrcKitchen() {
 
 function loadImageKitchen() {
   return new Promise(function (resolve, reject) {
+    let kitchenSliderItem = document.createElement('div')
+    kitchenSliderItem.className = 'kitchen-slider__item'
+    kitchenSliderItem.id = numberSlideKitchen
+    $('.kitchen-slider').append(kitchenSliderItem)
+
     let imageKitchen = document.createElement('img')
-    imageKitchen.className = 'kitchen-slider__item'
+    imageKitchen.className = 'kitchen-slider__img'
     imageKitchen.src = `images/kitchen/${numberSlideKitchen}.png`
-    $('.kitchen-slider').append(imageKitchen)
+    kitchenSliderItem.append(imageKitchen)
 
     imageKitchen.addEventListener('load', () => {
+      kitchenSliderItem.style.backgroundImage = `url(images/kitchen/${numberSlideKitchen}.png)`
+      imageKitchen.remove()
       numberSlideKitchen++
       resolve()
     })
@@ -541,4 +556,136 @@ function loadImageKitchen() {
 
 changeSrcKitchen()
 
-// слайдер кухни конец
+let numberBigKitchenSlider
+$(document).click(function (e) {
+  if ($(e.target).closest('.kitchen-slider__item').length) {
+    bigSliderSrc = 'kitchen'
+    numberBigKitchenSlider = e.target.id
+    changeBigKitchenSrc()
+  }
+  return
+})
+
+// малый слайдер кухни конец
+
+// кухни большой слайдер начало
+
+function changeBigKitchenSrc() {
+  $('.intro-mask').show()
+  $('.close-icon').show()
+  loadBigKitchenImage()
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .then(() => loadBigKitchenImage())
+    .catch((err) => false)
+    .finally(() => {
+      let currentKitchenSlide = $(
+        `.big-slider__item:nth-child(${numberBigKitchenSlider})`
+      )
+      $('.big-slider_main').prepend(currentKitchenSlide)
+      $('.big-slider_main').slick({
+        slidesToShow: 1,
+        infinite: false,
+        fade: true,
+      })
+      $('.big-slider_main').show()
+      $('.big-slider_main').slick('setPosition')
+    })
+}
+
+function loadBigKitchenImage() {
+  return new Promise(function (resolve, reject) {
+    let bigSliderItem = document.createElement('div')
+    bigSliderItem.className = 'big-slider__item'
+    $('.big-slider_main').append(bigSliderItem)
+
+    let bigSliderItemWrap = document.createElement('div')
+    bigSliderItemWrap.className = 'big-slider__wrap-item'
+    bigSliderItem.append(bigSliderItemWrap)
+
+    let image = document.createElement('img')
+    image.src = `images/${bigSliderSrc}/${numberSlide}.png`
+    bigSliderItemWrap.append(image)
+
+    image.addEventListener('load', () => {
+      numberSlide++
+      resolve()
+    })
+
+    image.addEventListener('error', () => {
+      $('.big-slider_main>.big-slider__item:last').remove()
+      console.clear()
+      reject()
+    })
+  })
+}
+
+$('.close-icon_kitchen').click(function (event) {
+  $('.big-slider_main').hide()
+  $('.big-slider_main').slick('unslick')
+  $('.big-slider_main').empty()
+  $('.intro-mask').hide()
+  $('.close-icon').hide()
+  numberSlide = 1
+})
+
+// кухни большой слайдер конец
