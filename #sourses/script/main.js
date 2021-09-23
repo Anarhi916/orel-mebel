@@ -100,13 +100,7 @@ $('#forma_3').submit(function () {
 
 // слайдер малый начало
 
-let sliderImages = $('.big-slider__wrap-item').children()
-sliderImages = Array.prototype.slice.call(sliderImages)
-
 $(document).ready(function () {
-  // запуск слайдера на в категориях(кухни, шкафы и т.д) после загрузки страницы
-  changeSrcKitchen()
-  // конец
   $('.little-slider').slick({
     slidesToShow: 3,
     autoplay: true,
@@ -189,8 +183,12 @@ $(document).ready(function () {
 
 let numberSlide = 1
 let bigSliderSrc
+let isSliderActive = false
+let isMainSliderActive = false
+let isPreloadSliderActive = false
 
 function changeSrc() {
+  isSliderActive = true
   $('.intro-mask').show()
   $('.close-icon').show()
   $('.main_galery__load').show()
@@ -201,6 +199,7 @@ function changeSrc() {
         infinite: false,
         fade: true,
       })
+      isPreloadSliderActive = true
       $('.main_galery__load').hide()
       $('.big-slider_preload').show()
       $('.big-slider_preload').slick('setPosition')
@@ -271,17 +270,25 @@ function changeSrc() {
         .then(() => loadImage())
         .catch((err) => false)
         .finally(() => {
-          $('.big-slider_main').slick({
-            slidesToShow: 1,
-            infinite: false,
-            fade: true,
-          })
-          let currentSlide = $('.big-slider_preload').slick('slickCurrentSlide')
-          $('.big-slider_main').slick('slickGoTo', `${currentSlide}`)
-          $('.main_galery__load').hide()
-          $('.big-slider_main').show()
-          $('.big-slider_main').slick('setPosition')
-          $('.big-slider_preload').hide()
+          if (isSliderActive === true) {
+            $('.big-slider_main').slick({
+              slidesToShow: 1,
+              infinite: false,
+              fade: true,
+            })
+            isMainSliderActive = true
+            let currentSlide = $('.big-slider_preload').slick(
+              'slickCurrentSlide'
+            )
+            $('.big-slider_main').slick('slickGoTo', `${currentSlide}`)
+            $('.main_galery__load').hide()
+            $('.big-slider_main').show()
+            $('.big-slider_main').slick('setPosition')
+            $('.big-slider_preload').hide()
+          } else {
+            $('.big-slider_main').empty()
+            numberSlide = 1
+          }
         })
     })
 }
@@ -351,10 +358,17 @@ function preLoadImage() {
 }
 
 $('.close-icon').click(function (event) {
+  isSliderActive = false
   $('.big-slider_main').hide()
   $('.big-slider_preload').hide()
-  $('.big-slider_main').slick('unslick')
-  $('.big-slider_preload').slick('unslick')
+  if (isMainSliderActive === true) {
+    $('.big-slider_main').slick('unslick')
+    isMainSliderActive = false
+  }
+  if (isPreloadSliderActive === true) {
+    $('.big-slider_preload').slick('unslick')
+    isPreloadSliderActive = false
+  }
   $('.big-slider_main').empty()
   $('.big-slider_preload').empty()
   $('.intro-mask').hide()
@@ -406,9 +420,30 @@ $('.little-slider__btn_wardrobe').click(function (event) {
 // слайдер большой конец
 
 // меню бургер
-
+let burgerActive = false
+let burgerCatalog = false
 $('.menu__burger').click(function (event) {
-  $('.cubes__last,.menu__list,.menu__link_triangle').toggleClass('active')
+  if (burgerActive) {
+    $('.cubes__last,.menu__list_mobile,.menu__link_triangle').removeClass(
+      'active'
+    )
+    $('.intro-mask').hide()
+    $('.header').css('z-index', '50')
+    burgerActive = false
+  } else if (burgerCatalog) {
+    $('.menu__list_mobile-catalog').removeClass('active-catalog')
+    $('.cubes__last,.menu__list_mobile,.menu__link_triangle').removeClass(
+      'active'
+    )
+    $('.intro-mask').hide()
+    $('.header').css('z-index', '50')
+    burgerCatalog = false
+  } else {
+    $('.cubes__last,.menu__list_mobile,.menu__link_triangle').addClass('active')
+    $('.intro-mask').show()
+    $('.header').css('z-index', '150')
+    burgerActive = true
+  }
   closeMenu()
 })
 
@@ -416,11 +451,38 @@ function closeMenu() {
   $(document).click(function (e) {
     if ($(e.target).closest('.menu').length) {
       return
+    } else if (burgerActive === true) {
+      $('.cubes__last,.menu__list_mobile,.menu__link_triangle').removeClass(
+        'active'
+      )
+      $('.intro-mask').hide()
+      $('.header').css('z-index', '50')
+      burgerActive = false
+    } else if (burgerCatalog === true) {
+      $('.menu__list_mobile-catalog').removeClass('active-catalog')
+      $('.cubes__last,.menu__list_mobile,.menu__link_triangle').removeClass(
+        'active'
+      )
+      $('.intro-mask').hide()
+      $('.header').css('z-index', '50')
+      burgerCatalog = false
     } else {
-      $('.cubes__last,.menu__list,.menu__link_triangle').removeClass('active')
+      return
     }
   })
 }
+
+$('.menu__link_prev-def').click(function (event) {
+  event.preventDefault()
+  if ($(window).width() < 1020) {
+    $('.menu__list_mobile-catalog').addClass('active-catalog')
+    $('.menu__list_mobile').removeClass('active')
+    burgerCatalog = true
+    burgerActive = false
+  } else {
+    return false
+  }
+})
 
 // меню бургер конец
 
@@ -558,8 +620,6 @@ function loadImageKitchen() {
   })
 }
 
-// changeSrcKitchen()
-
 let numberBigKitchenSlider
 $(document).click(function (e) {
   if ($(e.target).closest('.kitchen-slider__item').length) {
@@ -691,5 +751,7 @@ $('.close-icon_kitchen').click(function (event) {
   $('.close-icon').hide()
   numberSlide = 1
 })
+
+changeSrcKitchen()
 
 // кухни большой слайдер конец

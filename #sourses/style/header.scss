@@ -50,6 +50,9 @@
   height: 84px;
   align-items: center;
   position: relative;
+  .menu__list_mobile-catalog {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -58,6 +61,9 @@
   grid-auto-flow: column;
   grid-template: 1fr / 1.5fr 1.5fr 0.6fr 1fr 1fr;
   justify-items: center;
+  .menu__link_main {
+    display: none;
+  }
 }
 
 .menu__link {
@@ -279,6 +285,7 @@
     display: block;
     height: 110px;
     padding: 0;
+    position: absolute;
   }
 
   .menu__submenu {
@@ -289,12 +296,15 @@
     display: none;
   }
 
-  .menu__list.active {
+  .menu__list_mobile.active {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 130px;
     left: 10px;
+    .menu__link_main {
+      display: block;
+    }
 
     li {
       height: 95px;
@@ -317,6 +327,41 @@
         color: white;
         font-family: 'Myriad Pro';
         font-size: 53px;
+        font-weight: 400;
+        text-align: start;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .menu__list_mobile-catalog.active-catalog {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 130px;
+    left: 10px;
+
+    li {
+      height: 75px;
+      margin-bottom: 12px;
+      background-color: #ff671f;
+      padding: 0 17px 0 9px;
+
+      &:nth-child(1) {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 52px;
+          top: -37px;
+          border: 16px solid transparent;
+          border-bottom: 22px solid #ff671f;
+        }
+      }
+
+      a {
+        color: white;
+        font-family: 'Myriad Pro';
+        font-size: 40px;
         font-weight: 400;
         text-align: start;
         padding-top: 20px;
@@ -463,7 +508,19 @@
     }
   }
 
-  .menu__list.active {
+  .menu__list_mobile.active {
+    top: 120px;
+
+    li {
+      &:nth-child(1) {
+        &:before {
+          left: 27px;
+        }
+      }
+    }
+  }
+
+  .menu__list_mobile-catalog.active-catalog {
     top: 120px;
 
     li {
@@ -495,7 +552,19 @@
     }
   }
 
-  .menu__list.active {
+  .menu__list_mobile.active {
+    top: 110px;
+
+    li {
+      &:nth-child(1) {
+        &:before {
+          left: 22px;
+        }
+      }
+    }
+  }
+
+  .menu__list_mobile-catalog.active-catalog {
     top: 110px;
 
     li {
@@ -509,7 +578,7 @@
 }
 
 @media screen and (max-width: 538px) {
-  .menu__list.active {
+  .menu__list_mobile.active {
     li {
       a {
         font-size: 43px;
@@ -530,7 +599,17 @@
     padding: 0 7px 0 7px;
   }
 
-  .menu__list.active {
+  .menu__list_mobile.active {
+    li {
+      &:nth-child(1) {
+        &:before {
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  .menu__list_mobile-catalog.active-catalog {
     li {
       &:nth-child(1) {
         &:before {
@@ -545,6 +624,15 @@
   .menu__mobile-text {
     font-size: 34px;
   }
+
+  .menu__list_mobile-catalog.active-catalog {
+    li {
+      a {
+        font-size: 36px;
+        padding-top: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 445px) {
@@ -555,7 +643,8 @@
   .header {
     padding: 0 15px 0 15px;
   }
-  .menu__list.active {
+
+  .menu__list_mobile.active {
     li {
       &:nth-child(1) {
         &:before {
@@ -569,10 +658,24 @@
       }
     }
   }
+
+  .menu__list_mobile-catalog.active-catalog {
+    li {
+      &:nth-child(1) {
+        &:before {
+          left: 5px;
+        }
+      }
+      a {
+        font-size: 28px;
+        padding-top: 25px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 393px) {
-  .menu__list.active {
+  .menu__list_mobile.active {
     li {
       height: 75px;
       a {
@@ -612,9 +715,9 @@
 }
 
 @media screen and (max-width: 340px) {
-  .menu__list.active {
+  .menu__list_mobile.active {
     li {
-      height: 55px;
+      height: 60px;
 
       &:nth-child(1) {
         &:before {
@@ -627,9 +730,22 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 340px) {
+  .menu__list_mobile-catalog.active-catalog {
+    li {
+      height: 60px;
+      &:nth-child(1) {
+        &:before {
+          left: 0;
+        }
+      }
+      a {
+        font-size: 22px;
+        padding-top: 21px;
+      }
+    }
+  }
+
   .menu__mobile-text {
     padding-left: 10px;
   }

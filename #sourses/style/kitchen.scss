@@ -559,17 +559,25 @@
 
 .kitchen-slider .slick-arrow.slick-prev {
   left: 0;
-  border: 18px solid transparent;
-  border-right: 24px solid white;
-  background: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 20px;
+  height: 30px;
+  background-image: url(../images/arrow-prew.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   outline: none;
 }
 
 .kitchen-slider .slick-arrow.slick-next {
   right: 0;
-  border: 18px solid transparent;
-  border-left: 24px solid white;
-  background: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 20px;
+  height: 30px;
+  background-image: url(../images/arrow-next.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   outline: none;
 }
 
@@ -671,6 +679,16 @@
 
   .kitchen-slider__item {
     height: 350px;
+  }
+
+  .kitchen-slider .slick-arrow.slick-prev {
+    width: 30px;
+    height: 40px;
+  }
+
+  .kitchen-slider .slick-arrow.slick-next {
+    width: 30px;
+    height: 40px;
   }
 }
 
@@ -788,19 +806,15 @@
   }
 
   .kitchen-slider .slick-arrow {
-    top: 35%;
+    top: 32%;
   }
 
   .kitchen-slider .slick-arrow.slick-prev {
-    left: -25px;
-    border: 22px solid transparent;
-    border-right: 28px solid white;
+    left: -7px;
   }
 
   .kitchen-slider .slick-arrow.slick-next {
-    right: -25px;
-    border: 22px solid transparent;
-    border-left: 28px solid white;
+    right: -7px;
   }
 
   kitchen-slider {
