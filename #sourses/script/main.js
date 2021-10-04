@@ -314,7 +314,7 @@ function loadImage() {
 
     image.addEventListener('error', () => {
       $('.big-slider_main>.big-slider__item:last').remove()
-      // console.clear()
+      console.clear()
       reject()
     })
   })
@@ -758,10 +758,16 @@ if (title === 'Кухни') {
 
 // кухни большой слайдер конец
 
-// function executeSequentially(loadImage) {
+// function executeSequentially() {
 //   var resaltt = Promise.resolve()
-//   loadImage.forEach(function (loadImage) {
-//     resaltt = result.then(loadImage)
-//   })
+//   for(let i = 0; i<40; i++ ){
+//   function (myPromise) {
+//     resaltt = resaltt.then(myPromise)
+//   }()
+// }
 //   return resaltt
+// }
+
+// function myPromise() {
+//   return loadImage()
 // }
