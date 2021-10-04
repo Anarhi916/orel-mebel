@@ -314,7 +314,7 @@ function loadImage() {
 
     image.addEventListener('error', () => {
       $('.big-slider_main>.big-slider__item:last').remove()
-      console.clear()
+      // console.clear()
       reject()
     })
   })
@@ -449,7 +449,7 @@ $('.menu__burger').click(function (event) {
 
 function closeMenu() {
   $(document).click(function (e) {
-    if ($(e.target).closest('.menu').length) {
+    if ($(e.target).closest('.menu__wrap').length) {
       return
     } else if (burgerActive === true) {
       $('.cubes__last,.menu__list_mobile,.menu__link_triangle').removeClass(
@@ -614,7 +614,7 @@ function loadImageKitchen() {
 
     imageKitchen.addEventListener('error', () => {
       $('.kitchen-slider>.kitchen-slider__item:last').remove()
-      console.clear()
+      // console.clear()
       reject()
     })
   })
@@ -737,7 +737,7 @@ function loadBigKitchenImage() {
 
     image.addEventListener('error', () => {
       $('.big-slider_main>.big-slider__item:last').remove()
-      console.clear()
+      // console.clear()
       reject()
     })
   })
@@ -752,6 +752,16 @@ $('.close-icon_kitchen').click(function (event) {
   numberSlide = 1
 })
 
-changeSrcKitchen()
+if (title === 'Кухни') {
+  changeSrcKitchen()
+}
 
 // кухни большой слайдер конец
+
+// function executeSequentially(loadImage) {
+//   var resaltt = Promise.resolve()
+//   loadImage.forEach(function (loadImage) {
+//     resaltt = result.then(loadImage)
+//   })
+//   return resaltt
+// }
