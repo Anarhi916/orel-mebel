@@ -1,0 +1,44 @@
+.kitchen-head {
+  .kitchen-head__left_bedroom {
+    background-image: url(../images/bed1.png);
+  }
+
+  .kitchen-head__right_bedroom {
+    background-image: url(../images/bed9.png);
+  }
+}
+
+.layout__elem {
+  .layout__img1_bedroom {
+    width: 82%;
+    margin: 0 auto;
+    background-image: url(../images/bed2.png);
+  }
+  .layout__img2_bedroom {
+    width: 82%;
+    margin: 0 auto;
+    background-image: url(../images/bed3.png);
+  }
+  .layout__img3_bedroom {
+    background-image: url(../images/bed4.png);
+    width: 82%;
+    margin: 0 auto;
+  }
+  .layout__img4_bedroom {
+    width: 82%;
+    margin: 0 auto;
+    background-image: url(../images/bed5.png);
+  }
+}
+
+.kitchen-main .kitchen-facade {
+  .kitchen-facade__images_bedroom1 {
+    background-image: url(../images/bed6.png);
+  }
+  .kitchen-facade__images_bedroom2 {
+    background-image: url(../images/bed7.png);
+  }
+  .kitchen-facade__images_bedroom3 {
+    background-image: url(../images/bed8.png);
+  }
+}

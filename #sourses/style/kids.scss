@@ -1,0 +1,40 @@
+.kitchen-head {
+  .kitchen-head__left_kid {
+    background-image: url(../images/kid1.png);
+  }
+
+  .kitchen-head__right_kid {
+    background-image: url(../images/kid9.png);
+  }
+}
+
+.layout__elem {
+  .layout__img1_kid {
+    background-image: url(../images/kid2.png);
+  }
+  .layout__img2_kid {
+    width: 82%;
+    margin: 0 auto;
+    background-image: url(../images/kid3.png);
+  }
+  .layout__img3_kid {
+    background-image: url(../images/kid4.png);
+    width: 82%;
+    margin: 0 auto;
+  }
+  .layout__img4_kid {
+    background-image: url(../images/kid5.png);
+  }
+}
+
+.kitchen-main .kitchen-facade {
+  .kitchen-facade__images_kid1 {
+    background-image: url(../images/kid6.png);
+  }
+  .kitchen-facade__images_kid2 {
+    background-image: url(../images/kid7.png);
+  }
+  .kitchen-facade__images_kid3 {
+    background-image: url(../images/kid8.png);
+  }
+}

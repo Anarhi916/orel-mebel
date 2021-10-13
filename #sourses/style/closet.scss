@@ -1,0 +1,59 @@
+.kitchen-head {
+  .kitchen-head__left_closet {
+    background-image: url(../images/closet_Header.png);
+  }
+
+  .kitchen-head__right_closet {
+    background-image: url(../images/closet2.png);
+  }
+}
+
+.layout__elem {
+  .layout__img1_closet {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/closet3.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .layout__img2_closet {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/closet4.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .layout__img3_closet {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/closet5.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .layout__img4_closet {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/closet6.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.kitchen-main .kitchen-facade {
+  .kitchen-facade__images_closet1 {
+    background-image: url(../images/closet_Header.png);
+  }
+  .kitchen-facade__images_closet2 {
+    background-image: url(../images/closet9.png);
+  }
+  .kitchen-facade__images_closet3 {
+    background-image: url(../images/closet7.png);
+  }
+  .kitchen-facade__images_closet4 {
+    background-image: url(../images/closet8.png);
+  }
+}

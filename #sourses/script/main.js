@@ -602,11 +602,11 @@ function loadImageKitchen() {
 
     let imageKitchen = document.createElement('img')
     imageKitchen.className = 'kitchen-slider__img'
-    imageKitchen.src = `images/kitchen/${numberSlideKitchen}.png`
+    imageKitchen.src = `images/${kitchenSliderSrc}/${numberSlideKitchen}.png`
     kitchenSliderItem.append(imageKitchen)
 
     imageKitchen.addEventListener('load', () => {
-      kitchenSliderItem.style.backgroundImage = `url(images/kitchen/${numberSlideKitchen}.png)`
+      kitchenSliderItem.style.backgroundImage = `url(images/${kitchenSliderSrc}/${numberSlideKitchen}.png)`
       imageKitchen.remove()
       numberSlideKitchen++
       resolve()
@@ -614,7 +614,7 @@ function loadImageKitchen() {
 
     imageKitchen.addEventListener('error', () => {
       $('.kitchen-slider>.kitchen-slider__item:last').remove()
-      // console.clear()
+      console.clear()
       reject()
     })
   })
@@ -622,12 +622,44 @@ function loadImageKitchen() {
 
 let numberBigKitchenSlider
 $(document).click(function (e) {
-  if ($(e.target).closest('.kitchen-slider__item').length) {
+  if (
+    $(e.target).closest('.kitchen-slider__item').length &&
+    title === 'Кухни'
+  ) {
     bigSliderSrc = 'kitchen'
     numberBigKitchenSlider = e.target.id
     changeBigKitchenSrc()
+  } else if (
+    $(e.target).closest('.kitchen-slider__item').length &&
+    title === 'Шкаф-купе'
+  ) {
+    bigSliderSrc = 'closet'
+    numberBigKitchenSlider = e.target.id
+    changeBigKitchenSrc()
+  } else if (
+    $(e.target).closest('.kitchen-slider__item').length &&
+    title === 'Офисная мебель'
+  ) {
+    bigSliderSrc = 'office'
+    numberBigKitchenSlider = e.target.id
+    changeBigKitchenSrc()
+  } else if (
+    $(e.target).closest('.kitchen-slider__item').length &&
+    title === 'Детская мебель'
+  ) {
+    bigSliderSrc = 'kids'
+    numberBigKitchenSlider = e.target.id
+    changeBigKitchenSrc()
+  } else if (
+    $(e.target).closest('.kitchen-slider__item').length &&
+    title === 'Мебель для спальни'
+  ) {
+    bigSliderSrc = 'bedroom'
+    numberBigKitchenSlider = e.target.id
+    changeBigKitchenSrc()
+  } else {
+    return
   }
-  return
 })
 
 // малый слайдер кухни конец
@@ -737,7 +769,7 @@ function loadBigKitchenImage() {
 
     image.addEventListener('error', () => {
       $('.big-slider_main>.big-slider__item:last').remove()
-      // console.clear()
+      console.clear()
       reject()
     })
   })
@@ -753,6 +785,19 @@ $('.close-icon_kitchen').click(function (event) {
 })
 
 if (title === 'Кухни') {
+  kitchenSliderSrc = 'kitchen'
+  changeSrcKitchen()
+} else if (title === 'Шкаф-купе') {
+  kitchenSliderSrc = 'closet'
+  changeSrcKitchen()
+} else if (title === 'Офисная мебель') {
+  kitchenSliderSrc = 'office'
+  changeSrcKitchen()
+} else if (title === 'Детская мебель') {
+  kitchenSliderSrc = 'kids'
+  changeSrcKitchen()
+} else if (title === 'Мебель для спальни') {
+  kitchenSliderSrc = 'bedroom'
   changeSrcKitchen()
 }
 

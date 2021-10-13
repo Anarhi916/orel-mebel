@@ -126,7 +126,7 @@
     top: 275px;
     font-size: 16px;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: 4px;
   }
 }
 
@@ -588,7 +588,11 @@
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+
+.kitchen-slider__item:hover {
+  cursor: zoom-in;
 }
 
 // конец слайдер кухни
